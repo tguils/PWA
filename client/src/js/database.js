@@ -17,10 +17,10 @@ export const putDb = async (content) => {
   console.error('putDb not implemented');
 
   // open the db and its version
-  const db = await openDB('jate', 1);
+  const jateDB = await openDB('jate', 1);
 
   //create new transaction in db for read and write operations
-  const tx = db.transaction('jate', 'readwrite');
+  const tx = jateDB.transaction('jate', 'readwrite');
 
   //accessing jate object store 
   const store = tx.objectStore('jate');
@@ -38,10 +38,10 @@ export const getDb = async () => {
   console.error('getDb not implemented');
 
   //create connection to db and the version we want
-  const db = await openDB('jate', 1);
+  const jateDB = await openDB('jate', 1);
 
   // create new transaction and specify the db
-  const tx = db.transaction('jate', 'readonly');
+  const tx = jateDB.transaction('jate', 'readonly');
 
   // open the object store for selected object
   const store = tx.objectStore('jate');
