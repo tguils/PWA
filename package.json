@@ -2,14 +2,14 @@
   "name": "JATE",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "server/server.js",
   "scripts": {
-    "start:dev": "",
-    "start": "",
-    "server": "",
-    "build": "",
-    "install": "",
-    "client": ""
+    "start:dev": "concurrently \"npm run server\" \"npm run client\"",
+    "start": "node server/server.js",
+    "server": "nodemon server/server.js",
+    "build": "webpack mode production",
+    "install": "cd server && npm i && cd ../client && npm i",
+    "client": "cd client && npm install"
   },
   "keywords": [],
   "author": "",
