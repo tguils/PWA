@@ -2,9 +2,9 @@
     "name": "JATE",
     "version": "1.0.0",
     "description": "",
-    "main": "server/server.js",
+    "main": "server.js",
     "scripts": {
-        "server": "nodemon server/server.js ignore client"
+        "server": "nodemon server.js --ignore client"
     },
     "keywords": [],
     "author": "",
